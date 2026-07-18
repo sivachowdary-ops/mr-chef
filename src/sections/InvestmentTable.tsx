@@ -107,10 +107,11 @@ export default function InvestmentTable() {
         </div>
 
         {/* ── Disclaimer ────────────────────────────────────── */}
-        <p className="mx-auto mt-8 max-w-2xl text-center text-xs leading-relaxed text-brand-muted/70">
-          *Estimates shared by the business for reference only; actual results
-          depend on location, footfall, and operation.
-        </p>
+        <div className="mx-auto mt-10 max-w-2xl text-center bg-brand-cream/80 border border-brand-warm-gray/60 px-6 py-4 rounded-xl shadow-xs">
+          <p className="text-xs sm:text-sm font-semibold text-brand-charcoal leading-relaxed">
+            * Estimates shared by the business for reference only; actual results depend entirely on location, local footfall, and daily operation.
+          </p>
+        </div>
       </div>
     </section>
   );

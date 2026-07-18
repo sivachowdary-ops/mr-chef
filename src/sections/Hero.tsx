@@ -9,23 +9,30 @@ export default function Hero() {
     <section
       id="hero"
       className="relative min-h-[90vh] bg-brand-charcoal overflow-hidden flex items-center py-24"
-      style={{
-        backgroundImage: "url('/images/hero_food_bg.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
     >
+      {/* ── Looping background video ───────────────────────── */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="none"
+        className="pointer-events-none absolute inset-0 z-0 h-full w-full object-cover select-none"
+        aria-hidden="true"
+      >
+        <source src="/videos/hero-bg.mp4" type="video/mp4" />
+      </video>
+
       {/* Dark overlay backdrop to ensure white text is extremely readable */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 z-0 bg-black/65 backdrop-blur-[2px]"
+        className="pointer-events-none absolute inset-0 z-[1] bg-black/65 backdrop-blur-[2px]"
       />
 
       {/* Decorative gradient blob for warm lighting */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-brand-amber/20 blur-3xl"
+        className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[500px] w-[500px] rounded-full bg-brand-amber/20 blur-3xl z-[2]"
       />
 
       {/* Content */}
@@ -41,8 +48,16 @@ export default function Hero() {
             {hero.subheadline}
           </p>
 
+          {/* One-Time Investment Badge */}
+          <div className="inline-flex items-center gap-2 rounded-full border border-brand-amber/40 bg-brand-amber/15 px-4 py-2 backdrop-blur-sm">
+            <span className="text-base">💰</span>
+            <span className="text-sm font-bold text-white tracking-wide">
+              One-Time Investment — No Recurring Fees
+            </span>
+          </div>
+
           {/* CTAs */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:items-center justify-start mt-4">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center justify-start mt-2">
             <a
               href={whatsAppUrl}
               target="_blank"

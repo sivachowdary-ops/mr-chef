@@ -32,6 +32,7 @@ export const navItems = [
   { label: "Why Us", href: "#why-us" },
   { label: "Packages", href: "#packages" },
   { label: "Menu", href: "#menu" },
+  { label: "How It Works", href: "#how-it-works" },
   { label: "Gallery", href: "#gallery" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
@@ -71,7 +72,7 @@ export const benefits: Benefit[] = [
     icon: "TrendingUp",
     title: "Real Profit Potential",
     description:
-      "A ₹2,000/day business can generate approximately ₹1,000/day profit at ~50% margin.*",
+      "A ₹2,000/day business can generate approximately ₹800/day profit at ~40% margin.*",
   },
   {
     icon: "MapPin",
@@ -83,7 +84,7 @@ export const benefits: Benefit[] = [
     icon: "Truck",
     title: "End-to-End Logistics",
     description:
-      "Your unit is fabricated and transported from Vizag directly to your location.",
+      "Transport handled from Vizag to your location. Transportation charges are billed separately.",
   },
   {
     icon: "Settings",
@@ -163,7 +164,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "Do you handle transport and setup?",
     answer:
-      "Yes. Your unit is fabricated at our Vizag facility, transported to your location, and set up on-site. You don't need to arrange anything.",
+      "Yes, we handle setup and support end-to-end. Transportation from Vizag to your location is arranged by us, with transportation charges billed separately.",
   },
   {
     question: "Is my area exclusive to me?",
@@ -251,7 +252,7 @@ export const galleryItems: GalleryItem[] = [
     id: "gal-6",
     type: "image",
     src: "/images/store-4.webp",
-    alt: "Finished Box-Type mobile kiosk side panels and wheels detail",
-    title: "Finished Kiosk setup",
+    alt: "Finished Box-Type stall side panels detail",
+    title: "Box-Type Stall Setup",
   },
 ];

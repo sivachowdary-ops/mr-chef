@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import TickerBar from "@/components/TickerBar";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
@@ -8,6 +9,7 @@ import Packages from "@/sections/Packages";
 import InvestmentTable from "@/sections/InvestmentTable";
 import ModelComparison from "@/sections/ModelComparison";
 import Menu from "@/sections/Menu";
+import HowItWorks from "@/sections/HowItWorks";
 import Gallery from "@/sections/Gallery";
 import FAQ from "@/sections/FAQ";
 import Contact from "@/sections/Contact";
@@ -38,6 +40,7 @@ function App() {
 
   return (
     <>
+      <TickerBar />
       <Header />
       <main>
         <Hero />
@@ -46,6 +49,7 @@ function App() {
         <InvestmentTable />
         <ModelComparison />
         <Menu />
+        <HowItWorks />
         <Gallery />
         <FAQ />
         <Contact />

@@ -37,9 +37,14 @@ function PackageCard({ pkg, index }: { pkg: FranchisePackage; index: number }) {
       <div className="flex flex-1 flex-col gap-6 p-6 sm:p-8">
         {/* Name + subtitle */}
         <div>
-          <h3 className="font-heading text-2xl font-bold text-brand-charcoal">
-            {pkg.name}
-          </h3>
+          <div className="flex items-center justify-between gap-2">
+            <h3 className="font-heading text-2xl font-bold text-brand-charcoal">
+              {pkg.name}
+            </h3>
+            <Badge className="bg-brand-cream hover:bg-brand-cream/80 text-brand-charcoal border border-brand-warm-gray/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider shrink-0">
+              {pkg.kitchenType}
+            </Badge>
+          </div>
           <p className="mt-1 text-sm text-brand-muted">{pkg.subtitle}</p>
         </div>
 

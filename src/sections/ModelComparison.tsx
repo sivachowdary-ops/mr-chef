@@ -18,14 +18,13 @@ export default function ModelComparison() {
         <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
           {/* Card 1: Basic Stall */}
           <div className="card-premium p-6 sm:p-8 flex flex-col bg-white border-brand-warm-gray/60">
-
             {/* Model Title */}
             <div className="mb-4">
               <span className="text-xs text-brand-amber font-bold uppercase tracking-wider">
-                Entry Level Stall
+                Open Kitchen · Entry Level
               </span>
               <h3 className="font-heading text-xl font-extrabold text-brand-charcoal mt-0.5">
-                Basic Stall (Open Back)
+                Basic Stall
               </h3>
             </div>
 
@@ -37,11 +36,11 @@ export default function ModelComparison() {
               </li>
               <li className="flex items-start gap-2">
                 <Sparkles className="h-4.5 w-4.5 text-brand-gold shrink-0 mt-0.5" />
-                <span>Open back design for easy ventilation and service operations.</span>
+                <span>Open kitchen layout: prep and cooking are done outside/facing the customer.</span>
               </li>
               <li className="flex items-start gap-2">
                 <Sparkles className="h-4.5 w-4.5 text-brand-gold shrink-0 mt-0.5" />
-                <span>Comes with essential street food starter tools and single fryer.</span>
+                <span>Comes with essential street food starter tools and single fryer setup.</span>
               </li>
             </ul>
 
@@ -56,16 +55,15 @@ export default function ModelComparison() {
             </div>
           </div>
 
-          {/* Card 2: Box-Type Mid Model */}
+          {/* Card 2: Box-Type Stall */}
           <div className="card-premium p-6 sm:p-8 flex flex-col bg-white border-brand-warm-gray/60">
-
             {/* Model Title */}
             <div className="mb-4">
               <span className="text-xs text-brand-amber font-bold uppercase tracking-wider">
-                Full-Feature Mobile Kiosk
+                Enclosed Kitchen · Mid Model
               </span>
               <h3 className="font-heading text-xl font-extrabold text-brand-charcoal mt-0.5">
-                Box-Type Mobile Stall (Mid)
+                Box-Type Stall
               </h3>
             </div>
 
@@ -73,15 +71,19 @@ export default function ModelComparison() {
             <ul className="space-y-3.5 mb-6 text-sm text-brand-muted flex-grow">
               <li className="flex items-center gap-2">
                 <Ruler className="h-4.5 w-4.5 text-brand-amber/80 shrink-0" />
-                <span>Larger layout (7ft Length × 5ft Width) fitted with 4 mobility wheels.</span>
+                <span>Larger layout (7ft Length × 5ft Width) providing structured prep spaces.</span>
               </li>
               <li className="flex items-start gap-2">
                 <Sparkles className="h-4.5 w-4.5 text-brand-gold shrink-0 mt-0.5" />
-                <span>Lockable double-layer box layout for secure outdoor overnight parking.</span>
+                <span>Enclosed kitchen layout: operators stand inside the secure kiosk during service.</span>
               </li>
               <li className="flex items-start gap-2">
                 <Sparkles className="h-4.5 w-4.5 text-brand-gold shrink-0 mt-0.5" />
-                <span>Includes pizza oven, waffle machine, and dual melter systems.</span>
+                <span>Lockable double-layer box layout for secure outdoor overnight storage.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <Sparkles className="h-4.5 w-4.5 text-brand-gold shrink-0 mt-0.5" />
+                <span>Includes pizza oven, waffle machine, and triple chocolate melter systems.</span>
               </li>
             </ul>
 

@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Camera, Play, X, Video, ChevronLeft, ChevronRight } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight, Camera, X } from "lucide-react";
 import { galleryItems } from "@/data/siteConfig";
 import type { GalleryItem } from "@/data/siteConfig";
 
@@ -35,7 +35,6 @@ function VideoReelTile({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          // Only autoplay on smaller viewports where hover doesn't exist
           if (window.innerWidth < 768) {
             if (entry.isIntersecting) {
               videoEl.play().then(() => setIsPlaying(true)).catch(() => {});
@@ -55,54 +54,50 @@ function VideoReelTile({
   }, []);
 
   return (
-    <article
-      onClick={onClick}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="group relative aspect-[9/16] w-[260px] md:w-[280px] shrink-0 rounded-3xl overflow-hidden border-2 border-brand-warm-gray/60 bg-brand-charcoal cursor-pointer transition-all duration-300 hover:border-brand-amber/80 hover:-translate-y-1 shadow-lg hover:shadow-xl snap-start"
-    >
-      {/* Fallback Poster Background / Visual Pattern */}
-      <div className="absolute inset-0 z-0 flex flex-col items-center justify-center bg-gradient-to-t from-brand-charcoal via-brand-charcoal/80 to-brand-charcoal/40 p-4 text-center">
-        <Play className="h-10 w-10 text-white/50 mb-3 transition-transform duration-300 group-hover:scale-115 fill-white/10" />
-        <span className="text-white font-heading font-bold text-sm tracking-wide">
-          {item.title}
-        </span>
-        {item.isLaunchVideo && (
-          <span className="text-[10px] text-brand-amber font-semibold uppercase tracking-wider mt-1">
-            Launch — {item.locationName}
-          </span>
-        )}
+    <div className="snap-start shrink-0 w-[260px] md:w-[280px] flex flex-col">
+      {/* Media Card Container */}
+      <div
+        onClick={onClick}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+        className="group relative aspect-[9/16] w-full rounded-2xl overflow-hidden border border-brand-warm-gray bg-brand-charcoal cursor-pointer transition-all duration-300 hover:border-brand-amber/80 hover:-translate-y-1 shadow-md hover:shadow-lg"
+      >
+        {/* Fallback Poster Background / Visual Pattern */}
+        <div className="absolute inset-0 z-0 flex flex-col items-center justify-center bg-gradient-to-t from-brand-charcoal via-brand-charcoal/80 to-brand-charcoal/40 p-4 text-center">
+          <Play className="h-10 w-10 text-white/50 mb-3 transition-transform duration-300 group-hover:scale-115 fill-white/10" />
+        </div>
+
+        {/* Video element */}
+        <video
+          ref={videoRef}
+          src={item.src}
+          loop
+          muted
+          playsInline
+          preload="none"
+          className={`absolute inset-0 z-10 h-full w-full object-cover transition-opacity duration-300 ${
+            isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"
+          }`}
+        />
+
+        {/* Play Icon Indicator Overlay */}
+        <div className="absolute inset-0 z-20 flex items-center justify-center bg-black/35 opacity-100 group-hover:bg-black/20 transition-all">
+          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-amber text-white shadow-md transform group-hover:scale-110 transition-transform">
+            <Play className="h-5 w-5 fill-white ml-0.5" />
+          </div>
+        </div>
       </div>
 
-      {/* Actual Video Tag (Lazy loaded, preload="none" to save bandwidth) */}
-      <video
-        ref={videoRef}
-        src={item.src}
-        loop
-        muted
-        playsInline
-        preload="none"
-        className={`absolute inset-0 z-10 h-full w-full object-cover transition-opacity duration-300 ${
-          isPlaying ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
-      />
-
-      {/* Video indicators and badges */}
-      <div className="absolute top-4 left-4 z-20 flex items-center gap-1.5 rounded-lg bg-brand-amber px-2 py-1 text-[9px] font-bold uppercase tracking-wider text-white shadow-sm">
-        <Video className="h-3 w-3" />
-        Launch Clip
-      </div>
-
-      {/* Title overlay at the bottom */}
-      <div className="absolute inset-x-0 bottom-0 z-20 bg-gradient-to-t from-black/90 to-transparent p-4 pt-10">
+      {/* Clean UI Caption Under Card */}
+      <div className="mt-3 px-1">
         <span className="text-[10px] text-brand-amber font-bold uppercase tracking-wider">
-          {item.locationName ? `Location: ${item.locationName}` : "Franchise Video"}
+          {item.locationName ? `Franchise Launch — ${item.locationName}` : "Franchise Video"}
         </span>
-        <h4 className="font-heading font-bold text-white text-sm sm:text-base leading-tight">
+        <h4 className="font-heading font-bold text-brand-charcoal text-sm leading-tight mt-0.5">
           {item.title}
         </h4>
       </div>
-    </article>
+    </div>
   );
 }
 
@@ -114,34 +109,32 @@ function ImageReelTile({
   onClick: () => void;
 }) {
   return (
-    <article
-      onClick={onClick}
-      className="group relative aspect-[9/16] w-[260px] md:w-[280px] shrink-0 rounded-3xl overflow-hidden border-2 border-brand-warm-gray/60 bg-brand-warm-gray/30 flex flex-col items-center justify-center gap-2 cursor-pointer transition-all duration-300 hover:border-brand-amber/80 hover:-translate-y-1 shadow-lg hover:shadow-xl snap-start"
-    >
-      {/* Background Graphic / Layout Placeholder (WebP fallback) */}
-      <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
-           style={{ backgroundImage: `url('${item.src}')` }}
-      />
+    <div className="snap-start shrink-0 w-[260px] md:w-[280px] flex flex-col">
+      {/* Media Card Container */}
+      <div
+        onClick={onClick}
+        className="group relative aspect-[9/16] w-full rounded-2xl overflow-hidden border border-brand-warm-gray bg-brand-warm-gray/30 cursor-pointer transition-all duration-300 hover:border-brand-amber/80 hover:-translate-y-1 shadow-md hover:shadow-lg"
+      >
+        {/* Background WebP Cover Image */}
+        <div
+          className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat transition-transform duration-500 group-hover:scale-105"
+          style={{ backgroundImage: `url('${item.src}')` }}
+        />
 
-      {/* Overlay Backdrop to ensure text readability */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-t from-black/80 via-black/30 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
-
-      {/* Camera Icon placeholder inside background */}
-      <div className="relative z-20 flex flex-col items-center justify-center p-6 text-center text-white h-full justify-between py-12">
-        <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/10 backdrop-blur-xs text-white">
-          <Camera className="h-5 w-5" />
-        </div>
-
-        <div>
-          <span className="text-[9px] text-brand-gold font-bold uppercase tracking-wider">
-            Store Photo
-          </span>
-          <h4 className="font-heading font-bold text-white text-sm sm:text-base leading-tight mt-1">
-            {item.title}
-          </h4>
-        </div>
+        {/* Subtle overlay transition */}
+        <div className="absolute inset-0 z-10 bg-black/10 transition-opacity duration-300 group-hover:opacity-0" />
       </div>
-    </article>
+
+      {/* Clean UI Caption Under Card */}
+      <div className="mt-3 px-1">
+        <span className="text-[10px] text-brand-muted font-bold uppercase tracking-wider">
+          Store Photo
+        </span>
+        <h4 className="font-heading font-bold text-brand-charcoal text-sm leading-tight mt-0.5">
+          {item.title}
+        </h4>
+      </div>
+    </div>
   );
 }
 
@@ -163,7 +156,7 @@ export default function Gallery() {
 
   return (
     <section id="gallery" className="section-padding bg-brand-bg relative overflow-hidden">
-      {/* Gradient Blob for background depth */}
+      {/* Gradient Blob */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute -bottom-32 -right-32 h-[400px] w-[400px] rounded-full bg-gradient-to-br from-brand-amber/10 via-transparent to-transparent blur-3xl"
@@ -180,7 +173,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        {/* Navigation arrows for desktop row scroll */}
+        {/* Navigation arrows for desktop */}
         <div className="hidden md:flex justify-end gap-2 mb-4 pr-4">
           <button
             onClick={scrollLeft}
@@ -198,7 +191,7 @@ export default function Gallery() {
           </button>
         </div>
 
-        {/* Reels Horizontal Scroll Strip Row (No wrapping grid) */}
+        {/* Reels Horizontal Scroll Strip Row (no wrapping grid) */}
         <div
           ref={scrollRef}
           className="flex overflow-x-auto gap-6 snap-x snap-mandatory px-2 pb-8 scrollbar-thin scrollbar-track-brand-bg scrollbar-thumb-brand-muted/40"
@@ -248,7 +241,6 @@ export default function Gallery() {
           >
             {activeMedia.type === "video" ? (
               <div className="aspect-[9/16] w-full bg-black">
-                {/* Lazy-loaded video modal, auto-playing with audio on expanded lightbox */}
                 <video
                   src={activeMedia.src}
                   controls
@@ -258,9 +250,10 @@ export default function Gallery() {
                 />
               </div>
             ) : (
-              <div className="flex flex-col items-center justify-center aspect-[9/16] w-full bg-brand-bg text-center p-8 bg-cover bg-center"
-                   style={{ backgroundImage: `url('${activeMedia.src}')` }}>
-                {/* Fallback text if image asset doesn't exist yet */}
+              <div
+                className="flex flex-col items-center justify-center aspect-[9/16] w-full bg-brand-bg text-center p-8 bg-cover bg-center"
+                style={{ backgroundImage: `url('${activeMedia.src}')` }}
+              >
                 <div className="bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-brand-warm-gray/60 max-w-xs shadow-lg">
                   <Camera className="h-10 w-10 text-brand-amber/80 mb-3 mx-auto" />
                   <h3 className="font-heading text-base font-bold text-brand-charcoal mb-1">
