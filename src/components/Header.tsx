@@ -38,7 +38,7 @@ export default function Header() {
   return (
     <header
       className={cn(
-        "sticky inset-x-0 top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(31,27,24,0.08)]",
+        "relative inset-x-0 transition-all duration-300 bg-white/95 backdrop-blur-md shadow-[0_1px_3px_rgba(31,27,24,0.08)]",
         scrolled ? "py-2" : "py-4",
       )}
     >

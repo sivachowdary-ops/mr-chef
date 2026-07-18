@@ -12,7 +12,7 @@ export default function TickerBar() {
   const repeated = [...items, ...items, ...items, ...items];
 
   return (
-    <div className="sticky top-0 z-[60] overflow-hidden bg-brand-charcoal">
+    <div className="relative overflow-hidden bg-brand-charcoal">
       <div className="ticker-track flex whitespace-nowrap py-2">
         {repeated.map((item, idx) => (
           <span

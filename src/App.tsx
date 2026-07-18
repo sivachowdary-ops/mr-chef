@@ -40,8 +40,10 @@ function App() {
 
   return (
     <>
-      <TickerBar />
-      <Header />
+      <div className="sticky top-0 z-50 w-full">
+        <TickerBar />
+        <Header />
+      </div>
       <main>
         <Hero />
         <WhyPartner />

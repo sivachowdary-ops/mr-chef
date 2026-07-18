@@ -25,26 +25,23 @@ function PackageCard({ pkg, index }: { pkg: FranchisePackage; index: number }) {
       className="card-premium animate-on-scroll relative flex flex-col overflow-hidden"
       style={{ animationDelay: `${index * 150}ms` }}
     >
-      {/* ── Badge ─────────────────────────────────────────── */}
-      {pkg.badge && (
-        <div className="absolute right-4 top-4 z-10">
-          <Badge className="bg-brand-amber text-white border-brand-amber px-3 py-1 text-xs font-semibold">
-            {pkg.badge}
-          </Badge>
-        </div>
-      )}
       {/* ── Card body ─────────────────────────────────────── */}
       <div className="flex flex-1 flex-col gap-6 p-6 sm:p-8">
-        {/* Name + subtitle */}
+        {/* Name + subtitle + badges */}
         <div>
-          <div className="flex items-center justify-between gap-2">
-            <h3 className="font-heading text-2xl font-bold text-brand-charcoal">
-              {pkg.name}
-            </h3>
-            <Badge className="bg-brand-cream hover:bg-brand-cream/80 text-brand-charcoal border border-brand-warm-gray/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider shrink-0">
+          <div className="flex flex-wrap items-center gap-2 mb-3">
+            {pkg.badge && (
+              <Badge className="bg-brand-amber hover:bg-brand-amber/90 text-white border-brand-amber px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
+                {pkg.badge}
+              </Badge>
+            )}
+            <Badge className="bg-brand-cream hover:bg-brand-cream/80 text-brand-charcoal border border-brand-warm-gray/60 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider">
               {pkg.kitchenType}
             </Badge>
           </div>
+          <h3 className="font-heading text-2xl font-bold text-brand-charcoal">
+            {pkg.name}
+          </h3>
           <p className="mt-1 text-sm text-brand-muted">{pkg.subtitle}</p>
         </div>
 
