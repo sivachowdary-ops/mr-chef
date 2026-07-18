@@ -206,7 +206,7 @@
 
   /* Section heading */
   .section-heading {
-    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-brand-charcoal tracking-tight;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-extrabold text-brand-charcoal tracking-tighter leading-tight;
   }
 
   /* Section subheading */

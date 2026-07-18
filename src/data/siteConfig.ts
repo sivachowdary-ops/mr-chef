@@ -40,10 +40,10 @@ export const navItems = [
 
 // ─── Hero Section ────────────────────────────────────────────
 export const hero = {
-  headline: "Own a Mr Chef Outlet", // [PLACEHOLDER — Confirm exact tagline with client]
-  headlineAccent: "Zero Royalty, Real Profit",
+  headline: "Own a Mr Chef Kiosk Franchise", // Specific and direct
+  headlineAccent: "Zero Royalty. Double-Decker Stoves.", // Real commercial terms
   subheadline:
-    "Start your own food business with a fully-equipped, ready-to-operate franchise stall. Complete setup, transport & branding — all handled by us.",
+    "Get a fully-equipped ready-to-cook food stall with premium LED displays, custom kitchen tools, and menu customization. Fabricated in our Vizag workshop and shipped directly to you.",
   primaryCta: "Enquire Now on WhatsApp",
   secondaryCta: "View Franchise Packages",
 } as const;
@@ -58,39 +58,39 @@ export interface Benefit {
 export const benefits: Benefit[] = [
   {
     icon: "Percent",
-    title: "0% Royalty — Ever",
+    title: "0% Royalty Fees. Keep 100%.",
     description:
-      "No revenue-share cut, no hidden fees. Every rupee you earn stays with you.",
+      "We don't take a single rupee of your sales. No franchise commission, no revenue cuts, no monthly fees.",
   },
   {
     icon: "Wrench",
-    title: "Full Setup Handled",
+    title: "Ready-to-Cook Setup",
     description:
-      "Stall fabrication, LED branding, electrical wiring, equipment — all included in the package price.",
+      "Stall fabrication, UV printed 3D LED displays, warm lighting, and complete electrical wiring all included.",
   },
   {
     icon: "TrendingUp",
-    title: "Real Profit Potential",
+    title: "40% to 50% Daily Margins",
     description:
-      "A ₹2,000/day business can generate approximately ₹800/day profit at ~40% margin.*",
+      "A ₹2,000/day business can generate approximately ₹800/day profit. Higher menu pricing increases profits.*",
   },
   {
     icon: "MapPin",
-    title: "Area Exclusivity",
+    title: "Locked Territory Rights",
     description:
-      "One franchise per locked area — you won't compete with another Mr Chef outlet nearby.",
+      "Only one Mr Chef outlet is permitted in your designated locality to eliminate internal competition.",
   },
   {
     icon: "Truck",
-    title: "End-to-End Logistics",
+    title: "Vizag Workshop Direct",
     description:
-      "Transport handled from Vizag to your location. Transportation charges are billed separately.",
+      "Stalls are fabricated at our Visakhapatnam facility and transported to you. Transport charges are billed separately.",
   },
   {
     icon: "Settings",
-    title: "Fully Customizable",
+    title: "Custom Kitchen Layouts",
     description:
-      "Every unit is built to order. Customize layout, equipment, branding, and menu to fit your vision.",
+      "Need extra fryers, tawas, pizza ovens, or waffle panels? We customize the layout to match your target menu.",
   },
 ];
 
@@ -106,36 +106,36 @@ export const processSteps: ProcessStep[] = [
   {
     step: 1,
     icon: "MessageCircle",
-    title: "Enquire on WhatsApp",
-    description: "Reach out to us and tell us about your requirements.",
+    title: "WhatsApp Enquiry",
+    description: "Send us a message with your preferred location and timeline.",
   },
   {
     step: 2,
     icon: "ClipboardList",
-    title: "Discuss Package & Customization",
+    title: "Layout & Tools Call",
     description:
-      "We'll help you pick the right package and customize it for your needs.",
+      "We help you pick the right stall size and customize the kitchen equipment list.",
   },
   {
     step: 3,
     icon: "Lock",
-    title: "Area Lock-In",
+    title: "Territory Lock-In",
     description:
-      "Secure your exclusive territory — your area is locked for you only.",
+      "Secure your exclusive operational zone so no other Mr Chef can open nearby.",
   },
   {
     step: 4,
     icon: "Factory",
-    title: "Fabrication & Transport",
+    title: "Vizag Fabrication",
     description:
-      "Your unit is built at our Vizag facility and transported to your location.",
+      "We fabricate your unit, install LED branding, wire the board, and arrange transport.",
   },
   {
     step: 5,
     icon: "Rocket",
-    title: "Setup & Launch",
+    title: "Delivery & Open",
     description:
-      "We set up your outlet at your location. You're ready to serve customers.",
+      "Your kiosk arrives, is positioned on-site, and you start cooking.",
   },
 ];
 
@@ -147,44 +147,44 @@ export interface FaqItem {
 
 export const faqItems: FaqItem[] = [
   {
-    question: "Is there any royalty or ongoing fee?",
+    question: "Is there any royalty fee or monthly revenue share?",
     answer:
-      "No. Mr Chef operates on a 0% royalty model with no revenue share. Once you invest in your package, there are no recurring fees to us.",
+      "No. Mr Chef operates on a zero-royalty franchise model. You buy the setup and keep 100% of the profits you generate. There are no ongoing fees.",
   },
   {
-    question: "What's included in the package price?",
+    question: "What items come inside the commercial equipment list?",
     answer:
-      "Every package includes the complete stall/kiosk unit, LED branding, electrical wiring, and a full starter kitchen equipment set. See the package details above for the exact list.",
+      "Each package includes heavy-duty tools like the KFC Double Decker stove, 6-litre oil trays, roll tawa, strainers, and marination boxes. Detailed tool counts are listed in the package cards.",
   },
   {
-    question: "Can I customize my stall?",
+    question: "Can I customize the kitchen layout or menu items?",
     answer:
-      "Absolutely. Every unit is built to order. Layouts, equipment, branding, and pricing can all be tailored to your specific requirements. Discuss your ideas with us on WhatsApp.",
+      "Yes. Every stall is fabricated to order. We can adjust the steel layout, swap equipment, or add specific tools like pizza ovens or waffle plates based on what you plan to sell.",
   },
   {
-    question: "Do you handle transport and setup?",
+    question: "How is transport handled from Vizag?",
     answer:
-      "Yes, we handle setup and support end-to-end. Transportation from Vizag to your location is arranged by us, with transportation charges billed separately.",
+      "We coordinate the loading and transport from our Visakhapatnam facility directly to your location. Transport charges are calculated based on distance and billed separately.",
   },
   {
-    question: "Is my area exclusive to me?",
+    question: "How do I secure area exclusivity for my kiosk?",
     answer:
-      "Yes. We operate a strict one-franchise-per-locked-area policy. You won't have another Mr Chef outlet competing in your territory.",
+      "Once you select your package and place your booking, we lock in your location coordinates. We do not license or deliver any other Mr Chef unit in that local territory.",
   },
   {
-    question: "How long does the setup take?",
+    question: "What is the typical setup timeline?",
     answer:
-      "[PLACEHOLDER — Timeline to be confirmed by client. Reach out on WhatsApp for current timelines.]",
+      "Stall fabrication and wiring takes about 7 to 10 working days at our workshop. Transit times depend on your distance from Visakhapatnam.",
   },
   {
-    question: "What support do I get after launch?",
+    question: "What support is provided after my kiosk opens?",
     answer:
-      "[PLACEHOLDER — Post-launch support details to be confirmed by client. Contact us on WhatsApp to learn about our support program.]",
+      "We provide full equipment guidelines, custom branding graphics files, and menu consulting to help your cooks start operating efficiently from day one.",
   },
   {
-    question: "What kind of food can I sell?",
+    question: "What food categories are popular on the sample menu?",
     answer:
-      "Your menu is flexible. The Basic Stall supports a range of street food items, while the Box-Type Mid Model comes equipped for pizza, waffles, and more. We can help you plan a menu suited to your location.",
+      "Our kiosks are highly optimized for fast-prep street food like veg/non-veg pizzas, crispy chicken lollipops, egg and chicken rolls, peri peri french fries, mocktails, and fresh waffles.",
   },
 ];
 
