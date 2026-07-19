@@ -26,8 +26,8 @@
 
 @theme inline {
   /* Fonts */
-  --font-heading: "Poppins", sans-serif;
-  --font-sans: "Inter", sans-serif;
+  --font-heading: "Sora", sans-serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
 
   /* shadcn color mappings */
   --color-background: var(--background);
