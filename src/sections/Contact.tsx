@@ -34,6 +34,9 @@ export default function Contact() {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Get In Touch
+          </span>
           <h2 className="section-heading font-heading">
             Ready to Start Your Food Business?
           </h2>

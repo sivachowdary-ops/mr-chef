@@ -44,6 +44,9 @@ export default function InvestmentTable() {
       <div className="section-container">
         {/* ── Heading ───────────────────────────────────────── */}
         <div className="mb-12 text-center lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Investment Details
+          </span>
           <h2 className="section-heading">
             Investment at a <span className="text-gradient">Glance</span>
           </h2>
@@ -90,10 +93,10 @@ export default function InvestmentTable() {
                     {row.values.map((value, vIdx) => (
                       <td
                         key={`${row.label}-${vIdx}`}
-                        className={`px-5 py-3.5 text-center ${
+                        className={`px-5 py-3.5 text-center tabular-nums ${
                           row.highlight
-                            ? "font-bold text-brand-amber"
-                            : "text-brand-muted"
+                            ? "font-extrabold text-brand-amber text-base"
+                            : "font-semibold text-brand-charcoal/90"
                         }`}
                       >
                         {value}

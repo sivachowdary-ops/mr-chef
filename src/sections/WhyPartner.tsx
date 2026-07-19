@@ -25,9 +25,11 @@ export default function WhyPartner() {
       <div className="section-container">
         {/* ── Heading ───────────────────────────────────────── */}
         <div className="mb-12 text-center lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Why Mr Chef
+          </span>
           <h2 className="section-heading">
-            Why Partner With{" "}
-            <span className="text-gradient">Mr Chef</span>
+            Why Partner With <span className="text-gradient">Mr Chef</span>
           </h2>
         </div>
 

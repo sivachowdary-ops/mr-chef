@@ -34,7 +34,10 @@ export default function HowItWorks() {
     <section id="how-it-works" className="section-padding bg-white">
       <div className="section-container">
         {/* Header */}
-        <div className="text-center mb-14 lg:mb-20">
+        <div className="text-center mb-12 lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            The Process
+          </span>
           <h2 className="section-heading font-heading">How It Works</h2>
           <p className="section-subheading mx-auto mt-4">
             From first enquiry to serving customers — we handle the heavy

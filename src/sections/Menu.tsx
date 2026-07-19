@@ -21,6 +21,9 @@ export default function Menu() {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            What We Serve
+          </span>
           <h2 className="section-heading font-heading">
             Sample <span className="text-gradient">Menu</span>
           </h2>

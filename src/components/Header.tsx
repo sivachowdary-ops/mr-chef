@@ -52,16 +52,14 @@ export default function Header() {
           }}
           className="relative z-50 flex items-center gap-2"
         >
-          <span
+          <img
+            src="/images/logo.webp"
+            alt="Mr Chef Logo"
             className={cn(
-              "font-heading font-extrabold tracking-tight transition-all duration-300",
-              scrolled ? "text-xl" : "text-2xl",
-              "text-brand-charcoal",
+              "object-contain transition-all duration-300",
+              scrolled ? "h-8" : "h-11"
             )}
-          >
-            Mr{" "}
-            <span className="text-brand-amber">Chef</span>
-          </span>
+          />
         </a>
 
         {/* ── Desktop Navigation ──────────────────────────── */}

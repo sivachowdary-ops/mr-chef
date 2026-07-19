@@ -22,7 +22,11 @@ function PackageCard({ pkg, index }: { pkg: FranchisePackage; index: number }) {
 
   return (
     <article
-      className="card-premium animate-on-scroll relative flex flex-col overflow-hidden"
+      className={`card-premium animate-on-scroll relative flex flex-col overflow-hidden transition-all duration-300 ${
+        pkg.id === "box-type-mid"
+          ? "border-2 border-brand-amber ring-4 ring-brand-amber/5 md:scale-[1.02] md:-translate-y-1 shadow-lg hover:shadow-xl hover:ring-brand-amber/10 z-10"
+          : "border border-brand-warm-gray/60"
+      }`}
       style={{ animationDelay: `${index * 150}ms` }}
     >
       {/* ── Card body ─────────────────────────────────────── */}
@@ -177,7 +181,10 @@ export default function Packages() {
     <section id="packages" className="section-padding bg-white">
       <div className="section-container">
         {/* ── Heading ───────────────────────────────────────── */}
-        <div className="mb-12 flex flex-col items-center gap-4 text-center lg:mb-16">
+        <div className="mb-12 text-center lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Franchise Packages
+          </span>
           <h2 className="section-heading">
             Franchise <span className="text-gradient">Packages</span>
           </h2>

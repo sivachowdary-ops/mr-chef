@@ -31,9 +31,11 @@ export default function Footer() {
           {/* Column 1: Brand details */}
           <div className="flex flex-col gap-5">
             <a href="#" className="inline-block">
-              <span className="font-heading text-2xl font-extrabold tracking-tight text-white">
-                Mr <span className="text-brand-amber">Chef</span>
-              </span>
+              <img
+                src="/images/logo.webp"
+                alt="Mr Chef Logo"
+                className="h-10 object-contain bg-white rounded-md px-2.5 py-1"
+              />
             </a>
             <p className="text-sm leading-relaxed text-white/60">
               {brand.tagline}

@@ -19,6 +19,9 @@ export default function FAQ() {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Questions Answered
+          </span>
           <h2 className="section-heading font-heading">
             Frequently Asked Questions
           </h2>
@@ -27,19 +30,19 @@ export default function FAQ() {
           </p>
         </div>
 
-        {/* Accordion */}
+        {/* Accordion List with Elevation and Separation */}
         <div className="max-w-3xl mx-auto">
-          <Accordion className="w-full">
+          <Accordion className="w-full space-y-4">
             {faqItems.map((item, index) => (
               <AccordionItem
                 key={index}
                 value={`faq-${index}`}
-                className="border-b border-brand-warm-gray"
+                className="card-premium bg-white border border-brand-warm-gray/60 rounded-2xl overflow-hidden px-1 sm:px-2"
               >
-                <AccordionTrigger className="py-5 font-heading text-lg text-brand-charcoal hover:no-underline hover:text-brand-amber transition-colors">
+                <AccordionTrigger className="px-5 py-4 font-heading text-base sm:text-lg font-bold text-brand-charcoal hover:no-underline hover:text-brand-amber transition-colors text-left">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-brand-muted leading-relaxed text-base pb-5">
+                <AccordionContent className="px-5 text-brand-muted leading-relaxed text-sm sm:text-base pb-5">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

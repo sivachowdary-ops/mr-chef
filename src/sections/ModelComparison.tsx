@@ -6,6 +6,9 @@ export default function ModelComparison() {
       <div className="section-container">
         {/* Header */}
         <div className="text-center mb-12 lg:mb-16">
+          <span className="block text-xs sm:text-sm font-bold uppercase tracking-widest text-brand-amber mb-3.5">
+            Compare Models
+          </span>
           <h2 className="section-heading font-heading">
             Model <span className="text-gradient">Comparison</span>
           </h2>
