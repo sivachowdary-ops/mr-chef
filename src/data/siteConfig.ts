@@ -40,7 +40,7 @@ export const navItems = [
 
 // ─── Hero Section ────────────────────────────────────────────
 export const hero = {
-  headline: "Own a Mr Chef Kiosk Franchise", // Specific and direct
+  headline: "Own a Mr Chef Franchise", // Specific and direct
   headlineAccent: "Zero Royalty. Double-Decker Stoves.", // Real commercial terms
   subheadline:
     "Get a fully-equipped ready-to-cook food stall with premium LED displays, custom kitchen tools, and menu customization. Fabricated in our Vizag workshop and shipped directly to you.",
@@ -135,7 +135,7 @@ export const processSteps: ProcessStep[] = [
     icon: "Rocket",
     title: "Delivery & Open",
     description:
-      "Your kiosk arrives, is positioned on-site, and you start cooking.",
+      "Your stall arrives, is positioned on-site, and you start cooking.",
   },
 ];
 

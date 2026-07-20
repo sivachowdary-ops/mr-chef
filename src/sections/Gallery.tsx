@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { Play, ChevronLeft, ChevronRight, Camera, X } from "lucide-react";
+import { Play, ChevronLeft, ChevronRight, X } from "lucide-react";
 import { galleryItems } from "@/data/siteConfig";
 import type { GalleryItem } from "@/data/siteConfig";
 
@@ -253,19 +253,12 @@ export default function Gallery() {
                 />
               </div>
             ) : (
-              <div
-                className="flex flex-col items-center justify-center aspect-[9/16] w-full bg-brand-bg text-center p-8 bg-cover bg-center"
-                style={{ backgroundImage: `url('${activeMedia.src}')` }}
-              >
-                <div className="bg-white/95 backdrop-blur-md p-6 rounded-2xl border border-brand-warm-gray/60 max-w-xs shadow-lg">
-                  <Camera className="h-10 w-10 text-brand-amber/80 mb-3 mx-auto" />
-                  <h3 className="font-heading text-base font-bold text-brand-charcoal mb-1">
-                    {activeMedia.title}
-                  </h3>
-                  <p className="text-xs text-brand-muted leading-relaxed">
-                    Real photo placeholder: {activeMedia.alt}. Full resolution WebP assets will load in this background container.
-                  </p>
-                </div>
+              <div className="aspect-[9/16] w-full bg-brand-bg flex items-center justify-center overflow-hidden">
+                <img
+                  src={activeMedia.src}
+                  alt={activeMedia.alt}
+                  className="w-full h-full object-cover"
+                />
               </div>
             )}
 

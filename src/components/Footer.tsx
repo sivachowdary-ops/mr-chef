@@ -8,11 +8,7 @@ function InstagramIcon({ className }: { className?: string }) {
   );
 }
 
-function FacebookIcon({ className }: { className?: string }) {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-  );
-}
+
 
 function YoutubeIcon({ className }: { className?: string }) {
   return (
@@ -110,12 +106,9 @@ export default function Footer() {
             <h3 className="mb-5 font-heading text-xs font-bold uppercase tracking-widest text-white/40 border-b border-white/5 pb-2">
               Follow Us
             </h3>
-            <p className="text-xs text-white/50 leading-relaxed mb-4">
-              [PLACEHOLDER — Social handles coming soon. Handles will link directly to Facebook/Instagram pages]
-            </p>
             <div className="flex items-center gap-3">
               <a
-                href="https://instagram.com/mrchef"
+                href="https://www.instagram.com/mr.chef_offical?utm_source=qr"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-brand-amber hover:text-white"
@@ -124,16 +117,7 @@ export default function Footer() {
                 <InstagramIcon className="h-4.5 w-4.5" />
               </a>
               <a
-                href="https://facebook.com/mrchef"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-brand-amber hover:text-white"
-                aria-label="Facebook Page"
-              >
-                <FacebookIcon className="h-4.5 w-4.5" />
-              </a>
-              <a
-                href="https://youtube.com/mrchef"
+                href="https://youtube.com/@mrcheftarun?si=l_cGegkV2sTkWeRv"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-all hover:bg-brand-amber hover:text-white"
